@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="413,345" caption="0,0,0,36" roundcorner="4,4">
+    <Font name="微软雅黑" size="13" bold="false" italic="false" default="true" />
+    <Font name="微软雅黑" size="14" bold="false" italic="false" />
+    <Default name="Button" value="normalimage=&quot;file=&apos;button/dlg_button_normal.png&apos; fade=&apos;200&apos;&quot; hotimage=&quot;file=&apos;button/dlg_button_hover.png&apos; fade=&apos;200&apos;&quot; pushedimage=&quot;file=&apos;button/dlg_button_active.png&apos; fade=&apos;200&apos;&quot; " />
+    <VerticalLayout bordersize="1" width="402" height="367" bkcolor="#FFF4F5F6" bordercolor="#FF6C89A0" inset="1,0,1,0">
+        <HorizontalLayout height="25" bkcolor="#FF3790CE">
+            <Container width="25" height="25" bkcolor="#FFF4F5F6" inset="5,2,0,0" />
+            <VerticalLayout padding="5,0,0,0" inset="2,2,0,0">
+                <Label name="lable_title" text="添加新设备" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" font="0" />
+            </VerticalLayout>
+            <VerticalLayout />
+            <VerticalLayout width="39">
+                <Button name="closebtn" width="39" height="19" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="title/btn_close_normal.png" hotimage="title/btn_close_highlight.png" pushedimage="title/btn_close_down.png" disabledimage="file=&apos;Button/btn.png&apos; corner=&apos;5,11,5,11&apos; source=&apos;0,72,96,96&apos;" pushedtextcolor="#0077A8DE" hottextcolor="#00FFFFFF" />
+            </VerticalLayout>
+        </HorizontalLayout>
+        <HorizontalLayout height="1" bkcolor="#FF7498B4" />
+        <Label name="uuid" text="设备唯一标识" float="true" pos="27,51,0,0" width="79" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Label text="插件名称" float="true" pos="27,93,0,0" width="79" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Label text="设备 IP" float="true" pos="27,135,0,0" width="79" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Label text="端口" float="true" pos="236,138,0,0" width="53" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Label text="用户名" float="true" pos="27,177,0,0" width="79" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Label text="用户密码" float="true" pos="27,219,0,0" width="70" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Label text="通道号" float="true" pos="236,181,0,0" width="53" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Label text="昵称" float="true" pos="236,95,0,0" width="53" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Label text="备注" float="true" pos="27,261,0,0" width="79" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Label text="工作目录" float="true" pos="236,224,0,0" width="60" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Edit name="edit_uuid" text="自动生成" bordersize="1" float="true" pos="110,54,0,0" width="282" height="25" bkcolor="#FFFFFFFF" bordercolor="#FF4EA0D1" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <!--
+        <Edit name="edit_pluginname" bordersize="1" float="true" pos="110,96,0,0" width="116" height="25" bkcolor="#FFFFFFFF" bordercolor="#FF4EA0D1" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        -->
+        <Combo padding="0,4,0,0" name="comb_pluginname" float="true" pos="110,96,0,0" width="116" height="25" normalimage="file='combox/combox_120.png' source='0,0,120,22'" hotimage="file='combox/combox_120.png' source='0,22,120,44'" pushedimage="file='combox/combox_120.png' source='0,44,120,66'" textpadding="3,3,3,3" bordercolor="#FFEEEFF0" focusbordercolor="#FFEEEFF0" vscrollbar="true" itembkcolor="#FFFFFFFF" itemselectedbkcolor="#FFF0F5F8" itemhotbkcolor="#FFEEEFF0" >
+          <ListLabelElement text="汉邦高科HB7000" bordercolor="#FFEEEFF0" height="22" selected="true" />
+          <ListLabelElement text="大华DVRSDK" bordercolor="#FFEEEFF0" height="22" />
+          <ListLabelElement text="大立DVRSDK" bordercolor="#FFEEEFF0" height="22" />
+        </Combo>
+        <Edit name="edit_deviceip" bordersize="1" float="true" pos="110,139,0,0" width="116" height="25" bkcolor="#FFFFFFFF" bordercolor="#FF4EA0D1" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Edit name="edit_deviceport" bordersize="1" float="true" pos="296,139,0,0" width="94" height="25" bkcolor="#FFFFFFFF" bordercolor="#FF4EA0D1" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Edit name="edit_username" bordersize="1" float="true" pos="110,182,0,0" width="116" height="25" bkcolor="#FFFFFFFF" bordercolor="#FF4EA0D1" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Edit name="edit_userpwd" bordersize="1" float="true" pos="110,225,0,0" width="116" height="25" bkcolor="#FFFFFFFF" bordercolor="#FF4EA0D1" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Edit name="edit_channel" bordersize="1" float="true" pos="296,181,0,0" width="94" height="25" bkcolor="#FFFFFFFF" bordercolor="#FF4EA0D1" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Edit name="edit_nickname" bordersize="1" float="true" pos="296,97,0,0" width="94" height="25" bkcolor="#FFFFFFFF" bordercolor="#FF4EA0D1" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Edit name="edit_comment" bordersize="1" float="true" pos="110,264,0,0" width="282" height="25" bkcolor="#FFFFFFFF" bordercolor="#FF4EA0D1" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Edit name="edit_workingfolder" bordersize="1" float="true" pos="296,225,0,0" width="94" height="25" bkcolor="#FFFFFFFF" bordercolor="#FF4EA0D1" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Button name="ok" text="确认" float="true" pos="185,302,0,0" width="100" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;button/dlg_button_normal.png&apos; fade=&apos;200&apos;" hotimage="file=&apos;button/dlg_button_hover.png&apos; fade=&apos;200&apos;" pushedimage="file=&apos;button/dlg_button_active.png&apos; fade=&apos;200&apos;" />
+        <Button name="cancel" text="取消" float="true" pos="295,302,0,0" width="100" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;button/dlg_button_normal.png&apos; fade=&apos;200&apos;" hotimage="file=&apos;button/dlg_button_hover.png&apos; fade=&apos;200&apos;" pushedimage="file=&apos;button/dlg_button_active.png&apos; fade=&apos;200&apos;" />
+        <Label name="lable_error" float="true" pos="27,301,0,0" width="151" height="29" textcolor="#00FF0000" disabledtextcolor="#FFA7A6AA" />
+    </VerticalLayout>
+</Window>

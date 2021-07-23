@@ -1,0 +1,18 @@
+重新定义关于服务器 db 的定义
+
+1. t_account_basic(uuid, pwd, nickname, comment)
+2. t_account_admin(uuid, liscen_type, licensed_time, expired_time)
+3. t_account_child(uuid, ref_admin_uuid)
+4. t_account_child_permission(child_uuid, can_view_ba, can_view_record, can_ptz_ba, can_task_record)
+
+关于 device
+
+1. t_device_basic(uuid, plugin_name, ip, port, user, pwd, channel, session_folder)
+2. t_device_folder(autoid, account_uuid, folder_uuid, folder_parent_uuid, folder_nickname)
+3. t_device_account(admin_uuid, device_uuid, folder_uuid, nick_name, comment)
+4. t_device_extern(device_uuid, 
+
+关于录像
+
+1. t_record_task(device_uuid, week_records_tags)
+2. t_record_data(autoid, device_uuid, record_day, record_hour, record_minute, record_second_start, data_uri)

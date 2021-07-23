@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\db">
+      <UniqueIdentifier>{e3edd4fe-cbcf-4b51-a5a7-ca4cb9ca7a71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\db">
+      <UniqueIdentifier>{e1a91f69-5479-4298-810c-b77f2b5c2f00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\service">
+      <UniqueIdentifier>{c4b795f4-b52b-4ac6-998b-1e8f3f0e5b91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\service">
+      <UniqueIdentifier>{2046f8e5-7b80-4246-ab98-35e89897f646}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\service\db\db_account.c">
+      <Filter>Source Files\db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\service\db\db_util.c">
+      <Filter>Source Files\db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\service\service_api.c">
+      <Filter>Source Files\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\service\service_session.c">
+      <Filter>Source Files\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\service\service_callback.c">
+      <Filter>Source Files\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\service\service_push.c">
+      <Filter>Source Files\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\service\service_req_account.c">
+      <Filter>Source Files\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\service\service_req_device.c">
+      <Filter>Source Files\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\service\service_req_platform.c">
+      <Filter>Source Files\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\service\service_req_play.c">
+      <Filter>Source Files\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\service\service_req_record.c">
+      <Filter>Source Files\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\service\service_req_storage.c">
+      <Filter>Source Files\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\service\service_device.c">
+      <Filter>Source Files\service</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\service\db\db_util.h">
+      <Filter>Header Files\db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\service\db\db_account.h">
+      <Filter>Header Files\db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\public\db_account_declare.h">
+      <Filter>Header Files\db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\service\service_session.h">
+      <Filter>Header Files\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\service\service_callback.h">
+      <Filter>Header Files\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\service\service_push.h">
+      <Filter>Header Files\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\service\service_req_declare.h">
+      <Filter>Header Files\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\service\service_device.h">
+      <Filter>Header Files\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\public\session_device_declare.h">
+      <Filter>Header Files\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\public\session_online_declare.h">
+      <Filter>Header Files\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\public\service_api.h">
+      <Filter>Header Files\service</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

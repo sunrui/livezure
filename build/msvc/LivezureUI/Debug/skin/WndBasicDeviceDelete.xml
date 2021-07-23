@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="413,195" caption="0,0,0,36" roundcorner="4,4">
+    <Font name="微软雅黑" size="13" bold="false" italic="false" default="true" />
+    <Font name="微软雅黑" size="14" bold="false" italic="false" />
+    <Default name="Button" value="normalimage=&quot;file=&apos;button/dlg_button_normal.png&apos; fade=&apos;200&apos;&quot; hotimage=&quot;file=&apos;button/dlg_button_hover.png&apos; fade=&apos;200&apos;&quot; pushedimage=&quot;file=&apos;button/dlg_button_active.png&apos; fade=&apos;200&apos;&quot; " />
+    <Default name="CheckBox" value="textcolor=&quot;#FFbac0c5&quot; hottextcolor=&quot;#FF386382&quot; selectedtextcolor=&quot;#FF386382&quot; disabledtextcolor=&quot;#FFbac0c5&quot; textpadding=&quot;20,2,0,0&quot; align=&quot;left&quot; selectedimage=&quot;file=&apos;Icon/checked.png&apos; dest=&apos;0,2,16,18&apos;&quot; normalimage=&quot;file=&apos;Icon/unchecked.png&apos; dest=&apos;0,2,16,18&apos;&quot;" />
+    <VerticalLayout bordersize="1" width="413" height="213" bkcolor="#FFF4F5F6" bordercolor="#FF6C89A0" inset="1,0,1,0">
+        <HorizontalLayout height="25" bkcolor="#FF3790CE">
+            <Container width="25" height="25" bkcolor="#FFF4F5F6" inset="5,2,0,0" />
+            <VerticalLayout padding="5,0,0,0" inset="2,2,0,0">
+                <Label name="lable_title" text="确认删除设备" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" font="0" />
+            </VerticalLayout>
+            <VerticalLayout />
+            <VerticalLayout width="39">
+                <Button name="closebtn" width="39" height="19" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="title/btn_close_normal.png" hotimage="title/btn_close_highlight.png" pushedimage="title/btn_close_down.png" disabledimage="file=&apos;Button/btn.png&apos; corner=&apos;5,11,5,11&apos; source=&apos;0,72,96,96&apos;" pushedtextcolor="#0077A8DE" hottextcolor="#00FFFFFF" />
+            </VerticalLayout>
+        </HorizontalLayout>
+        <HorizontalLayout height="1" bkcolor="#FF7498B4" />
+        <Button name="ok" text="确认" float="true" pos="186,149,0,0" width="100" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;button/dlg_button_normal.png&apos; fade=&apos;200&apos;" hotimage="file=&apos;button/dlg_button_hover.png&apos; fade=&apos;200&apos;" pushedimage="file=&apos;button/dlg_button_active.png&apos; fade=&apos;200&apos;" />
+        <Button name="cancel" text="取消" float="true" pos="295,150,0,0" width="100" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;button/dlg_button_normal.png&apos; fade=&apos;200&apos;" hotimage="file=&apos;button/dlg_button_hover.png&apos; fade=&apos;200&apos;" pushedimage="file=&apos;button/dlg_button_active.png&apos; fade=&apos;200&apos;" />
+        <Label name="lable_warn" text="删除设备同时将会清除一切和此设备相关的记录。" float="true" pos="93,41,0,0" width="315" height="29" textcolor="#FF4EA0D1" disabledtextcolor="#FFA7A6AA" />
+        <Label float="true" pos="30,56,0,0" width="40" height="40" bkimage="messagebox\sysmessagebox_warningFile.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Label text="您确认要永久删除设备相关的所有记录吗？" float="true" pos="93,71,0,0" width="259" height="29" textcolor="#FF4EA0D1" disabledtextcolor="#FFA7A6AA" />
+        <Label text="注意: 同时会删除录像记录。" float="true" pos="93,101,0,0" width="160" height="30" textcolor="#00FF0042" disabledtextcolor="#FFA7A6AA" />
+    </VerticalLayout>
+</Window>

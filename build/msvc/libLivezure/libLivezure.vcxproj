@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3075F117-E5C6-47AE-9295-CCA0C7D93FC6}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>service</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\pthreads\include;..\..\..\3rdparty\vld\include;..\..\..\3rdparty\log4c_extend\include;..\..\..\dbprovider;..\..\..\rpcprovider;..\..\..\utils;..\..\..\common;..\..\..\service;..\..\..\service\db;..\..\..\public;..\..\..\public\liveagent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\3rdparty\log4c_extend\lib;..\..\..\3rdparty\openssl\lib;..\..\..\3rdparty\vld\lib\Win32;..\..\..\3rdparty\pthreads\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>pthreadVSE2.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\pthreads\include;..\..\..\3rdparty\vld\include;..\..\..\3rdparty\log4c_extend\include;..\..\..\dbprovider;..\..\..\rpcprovider;..\..\..\utils;..\..\..\common;..\..\..\service;..\..\..\service\db;..\..\..\public;..\..\..\public\liveagent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\3rdparty\log4c_extend\lib;..\..\..\3rdparty\openssl\lib;..\..\..\3rdparty\vld\lib\Win32;..\..\..\3rdparty\pthreads\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>pthreadVSE2.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\service\db\db_account.c" />
+    <ClCompile Include="..\..\..\service\db\db_util.c" />
+    <ClCompile Include="..\..\..\service\service_api.c" />
+    <ClCompile Include="..\..\..\service\service_callback.c" />
+    <ClCompile Include="..\..\..\service\service_device.c" />
+    <ClCompile Include="..\..\..\service\service_push.c" />
+    <ClCompile Include="..\..\..\service\service_req_account.c" />
+    <ClCompile Include="..\..\..\service\service_req_device.c" />
+    <ClCompile Include="..\..\..\service\service_req_platform.c" />
+    <ClCompile Include="..\..\..\service\service_req_play.c" />
+    <ClCompile Include="..\..\..\service\service_req_record.c" />
+    <ClCompile Include="..\..\..\service\service_req_storage.c" />
+    <ClCompile Include="..\..\..\service\service_session.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\public\service_api.h" />
+    <ClInclude Include="..\..\..\public\session_device_declare.h" />
+    <ClInclude Include="..\..\..\public\session_online_declare.h" />
+    <ClInclude Include="..\..\..\service\db\db_account.h" />
+    <ClInclude Include="..\..\..\service\db\db_util.h" />
+    <ClInclude Include="..\..\..\public\db_account_declare.h" />
+    <ClInclude Include="..\..\..\service\service_callback.h" />
+    <ClInclude Include="..\..\..\service\service_device.h" />
+    <ClInclude Include="..\..\..\service\service_push.h" />
+    <ClInclude Include="..\..\..\service\service_req_declare.h" />
+    <ClInclude Include="..\..\..\service\service_session.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

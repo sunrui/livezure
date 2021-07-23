@@ -1,0 +1,11 @@
+EXPORTS
+	sql_init
+	sql_clean
+	sql_test_connect
+	sql_create_new
+	sql_query
+	sql_num_fields
+	sql_fetch_row
+	sql_fetch_row_free
+	sql_error
+	sql_free

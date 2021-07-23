@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="353,264" caption="0,0,0,36" roundcorner="4,4">
+    <Font name="微软雅黑" size="13" bold="false" italic="false" default="true" />
+    <Font name="微软雅黑" size="14" bold="false" italic="false" />
+    <Default name="Button" value="normalimage=&quot;file=&apos;button/dlg_button_normal.png&apos; fade=&apos;200&apos;&quot; hotimage=&quot;file=&apos;button/dlg_button_hover.png&apos; fade=&apos;200&apos;&quot; pushedimage=&quot;file=&apos;button/dlg_button_active.png&apos; fade=&apos;200&apos;&quot; " />
+    <VerticalLayout bordersize="1" width="345" height="266" bkcolor="#FFF4F5F6" bordercolor="#FF6C89A0" inset="1,0,1,0">
+        <HorizontalLayout height="25" bkcolor="#FF3790CE">
+            <Container width="25" height="25" bkcolor="#FFF4F5F6" inset="5,2,0,0" />
+            <VerticalLayout padding="5,0,0,0" inset="2,2,0,0">
+                <Label name="lable_title" text="新用户注册" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" font="0" />
+            </VerticalLayout>
+            <VerticalLayout />
+            <VerticalLayout width="39">
+                <Button name="closebtn" width="39" height="19" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="title/btn_close_normal.png" hotimage="title/btn_close_highlight.png" pushedimage="title/btn_close_down.png" disabledimage="file=&apos;Button/btn.png&apos; corner=&apos;5,11,5,11&apos; source=&apos;0,72,96,96&apos;" pushedtextcolor="#0077A8DE" hottextcolor="#00FFFFFF" />
+            </VerticalLayout>
+        </HorizontalLayout>
+        <HorizontalLayout height="1" bkcolor="#FF7498B4" />
+        <Label text="用户名" float="true" pos="25,53,0,0" width="43" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Label text="新密码" float="true" pos="25,90,0,0" width="43" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Label text="新密码2" float="true" pos="25,127,0,0" width="51" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Label text="昵称" float="true" pos="178,55,0,0" width="28" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Label text="备注" float="true" pos="25,164,0,0" width="43" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Edit name="edit_username" bordersize="1" float="true" pos="76,57,0,0" width="90" height="25" bkcolor="#FFFFFFFF" bordercolor="#FF4EA0D1" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Edit name="edit_userpwd" bordersize="1" float="true" pos="76,94,0,0" width="116" height="25" bkcolor="#FFFFFFFF" bordercolor="#FF4EA0D1" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Edit name="edit_userpwd2" bordersize="1" float="true" pos="76,131,0,0" width="116" height="25" bkcolor="#FFFFFFFF" bordercolor="#FF4EA0D1" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Edit name="edit_nickname" bordersize="1" float="true" pos="212,57,0,0" width="90" height="25" bkcolor="#FFFFFFFF" bordercolor="#FF4EA0D1" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Edit name="edit_comment" bordersize="1" float="true" pos="76,168,0,0" width="237" height="25" bkcolor="#FFFFFFFF" bordercolor="#FF4EA0D1" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Button name="ok" text="确认" float="true" pos="127,217,0,0" width="100" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;button/dlg_button_normal.png&apos; fade=&apos;200&apos;" hotimage="file=&apos;button/dlg_button_hover.png&apos; fade=&apos;200&apos;" pushedimage="file=&apos;button/dlg_button_active.png&apos; fade=&apos;200&apos;" />
+        <Button name="cancel" text="取消" float="true" pos="236,217,0,0" width="100" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;button/dlg_button_normal.png&apos; fade=&apos;200&apos;" hotimage="file=&apos;button/dlg_button_hover.png&apos; fade=&apos;200&apos;" pushedimage="file=&apos;button/dlg_button_active.png&apos; fade=&apos;200&apos;" />
+        <Label float="true" pos="37,311,0,0" width="151" height="29" textcolor="#00FF0000" disabledtextcolor="#FFA7A6AA" />
+        <Label float="true" pos="37,311,0,0" width="151" height="29" textcolor="#00FF0000" disabledtextcolor="#FFA7A6AA" />
+        <Label float="true" pos="37,311,0,0" width="151" height="29" textcolor="#00FF0000" disabledtextcolor="#FFA7A6AA" />
+        <Label name="lable_error" float="true" pos="19,217,0,0" width="101" height="30" textcolor="#00FF0000" disabledtextcolor="#FFA7A6AA" />
+    </VerticalLayout>
+</Window>

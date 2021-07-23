@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\rpcprovider\rpc_buffer.c" />
+    <ClCompile Include="..\..\..\rpcprovider\rpc_crypt.c" />
+    <ClCompile Include="..\..\..\rpcprovider\rpc_io.c" />
+    <ClCompile Include="..\..\..\rpcprovider\rpc_client.c" />
+    <ClCompile Include="..\..\..\rpcprovider\rpc_dispatch.c" />
+    <ClCompile Include="..\..\..\rpcprovider\rpc_keypair.c" />
+    <ClCompile Include="..\..\..\rpcprovider\rpc_alloctor.c" />
+    <ClCompile Include="..\..\..\rpcprovider\rpc_parser.c" />
+    <ClCompile Include="..\..\..\rpcprovider\rpc_queue.c" />
+    <ClCompile Include="..\..\..\rpcprovider\rpc_request.c" />
+    <ClCompile Include="..\..\..\rpcprovider\rpc_ringbuffer.c" />
+    <ClCompile Include="..\..\..\rpcprovider\rpc_service.c" />
+    <ClCompile Include="..\..\..\rpcprovider\rpc_threadpool.c" />
+    <ClCompile Include="..\..\..\rpcprovider\rpc_util.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\rpcprovider\rpc_buffer.h" />
+    <ClInclude Include="..\..\..\rpcprovider\rpc_crypt.h" />
+    <ClInclude Include="..\..\..\rpcprovider\rpc_io.h" />
+    <ClInclude Include="..\..\..\rpcprovider\rpc_client.h" />
+    <ClInclude Include="..\..\..\rpcprovider\rpc_dispatch.h" />
+    <ClInclude Include="..\..\..\rpcprovider\rpc_keypair.h" />
+    <ClInclude Include="..\..\..\rpcprovider\rpc_alloctor.h" />
+    <ClInclude Include="..\..\..\rpcprovider\rpc_parser.h" />
+    <ClInclude Include="..\..\..\rpcprovider\rpc_proto.h" />
+    <ClInclude Include="..\..\..\rpcprovider\rpc_queue.h" />
+    <ClInclude Include="..\..\..\rpcprovider\rpc_request.h" />
+    <ClInclude Include="..\..\..\rpcprovider\rpc_ringbuffer.h" />
+    <ClInclude Include="..\..\..\rpcprovider\rpc_service.h" />
+    <ClInclude Include="..\..\..\rpcprovider\rpc_shell.h" />
+    <ClInclude Include="..\..\..\rpcprovider\rpc_threadpool.h" />
+    <ClInclude Include="..\..\..\rpcprovider\rpc_util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\common\common.vcxproj">
+      <Project>{b5e05e0a-9495-476a-8b95-db126138675c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libuv\libuv.vcxproj">
+      <Project>{ac86ff4d-1a5e-4a1f-9861-e55d11f2b104}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\utils\utils.vcxproj">
+      <Project>{6ac0b9c8-d4dc-44d2-a437-98f16b89ede8}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="rpcprovider.rc" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BE57EF4A-61E0-4CBF-BFC6-4F0746C42D9D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>rpcprovider</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\libuv\include;..\..\..\3rdparty\libevent\include;..\..\..\3rdparty\libevent\include\event2;..\..\..\3rdparty\pthreads\include;..\..\..\3rdparty\vld\include;..\..\..\utils;..\..\..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\3rdparty\libevent\lib;..\..\..\3rdparty\pthreads\lib;..\..\..\3rdparty\vld\lib\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>pthreadVSE2.lib;ws2_32.lib;psapi.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>rpcprovider.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\libuv\include;..\..\..\3rdparty\libevent\include;..\..\..\3rdparty\libevent\include\event2;..\..\..\3rdparty\pthreads\include;..\..\..\3rdparty\vld\include;..\..\..\utils;..\..\..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\3rdparty\libevent\lib;..\..\..\3rdparty\pthreads\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>pthreadVSE2.lib;ws2_32.lib;psapi.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>rpcprovider.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

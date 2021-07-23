@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{33969F7B-E44D-4279-8344-7EBA2C8C8408}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>LivezureUI</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\..\3rdparty\libuv\include;..\..\..\..\3rdparty\pthreads\include;..\..\..\..\3rdparty\vld\include;..\..\..\..\3rdparty\log4c_extend\include;..\..\..\..\3rdparty\DuiLib;..\..\..\..\dbprovider;..\..\..\..\rpcprovider;..\..\..\..\utils;..\..\..\..\common;..\..\..\..\service;..\..\..\..\service\db;..\..\..\..\public;..\..\..\..\public\liveagent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\..\3rdparty\log4c_extend\lib;..\..\..\..\3rdparty\vld\lib\Win32;..\..\..\..\3rdparty\pthreads\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>pthreadVSE2.lib;ws2_32.lib;comctl32.lib;psapi.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\..\3rdparty\pthreads\include;..\..\..\..\3rdparty\vld\include;..\..\..\..\3rdparty\log4c_extend\include;..\..\..\..\3rdparty\DuiLib;..\..\..\..\dbprovider;..\..\..\..\rpcprovider;..\..\..\..\utils;..\..\..\..\common;..\..\..\..\service;..\..\..\..\service\db;..\..\..\..\public;..\..\..\..\public\liveagent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\..\3rdparty\log4c_extend\lib;..\..\..\..\3rdparty\vld\lib\Win32;..\..\..\..\3rdparty\pthreads\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>pthreadVSE2.lib;ws2_32.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="MainFrame.h" />
+    <ClInclude Include="MainLogin.h" />
+    <ClInclude Include="MenuWnd.h" />
+    <ClInclude Include="MutexLock.h" />
+    <ClInclude Include="NavTree.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="WndBasicAccount.h" />
+    <ClInclude Include="WndBasicAccountAdd.h" />
+    <ClInclude Include="WndBasicAccountDelete.h" />
+    <ClInclude Include="WndBasicAccountDetail.h" />
+    <ClInclude Include="WndBasicAccountModify.h" />
+    <ClInclude Include="WndBasicDevice.h" />
+    <ClInclude Include="WndBasicDeviceAdd.h" />
+    <ClInclude Include="WndBasicDeviceDelete.h" />
+    <ClInclude Include="WndBasicDeviceDetail.h" />
+    <ClInclude Include="WndBasicDeviceModify.h" />
+    <ClInclude Include="WndBasicRecordSchedule.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MainFrame.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="WinMain.cpp" />
+    <ClCompile Include="WndBasicAccount.cpp" />
+    <ClCompile Include="WndBasicDevice.cpp" />
+    <ClCompile Include="WndBasicRecordSchedule.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\3rdparty\DuiLib\DuiLib.vcxproj">
+      <Project>{16f219d0-fb51-4047-80fa-c53a51dda15f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\common.vcxproj">
+      <Project>{b5e05e0a-9495-476a-8b95-db126138675c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\dbprovider\dbprovider.vcxproj">
+      <Project>{97f069be-83bc-4188-8e39-3e600fb627b1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libLivezure\libLivezure.vcxproj">
+      <Project>{3075f117-e5c6-47ae-9295-cca0c7d93fc6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libuv\libuv.vcxproj">
+      <Project>{ac86ff4d-1a5e-4a1f-9861-e55d11f2b104}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\rpcprovider\rpcprovider.vcxproj">
+      <Project>{be57ef4a-61e0-4cbf-bfc6-4f0746c42d9d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\utils\utils.vcxproj">
+      <Project>{6ac0b9c8-d4dc-44d2-a437-98f16b89ede8}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="LivezureUI.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\LivezureUI.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

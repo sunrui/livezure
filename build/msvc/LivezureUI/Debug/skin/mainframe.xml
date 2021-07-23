@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window mininfo="1024,720" size="1024,720" roundcorner="5,5" caption="0,0,0,25" >
+  <Default name="VScrollBar" value="button1normalimage=&quot;file='scrollbar.bmp' source='0,90,16,106' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='scrollbar.bmp' source='18,90,34,106' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='scrollbar.bmp' source='36,90,52,106' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='scrollbar.bmp' source='54,90,70,106' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='scrollbar.bmp' source='0,108,16,124' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='scrollbar.bmp' source='18,108,34,124' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='scrollbar.bmp' source='36,108,52,124' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='scrollbar.bmp' source='54,108,70,124' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='scrollbar.bmp' source='0,126,16,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='scrollbar.bmp' source='18,126,34,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='scrollbar.bmp' source='36,126,52,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='scrollbar.bmp' source='54,126,70,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='scrollbar.bmp' source='0,144,16,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='scrollbar.bmp' source='18,144,34,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='scrollbar.bmp' source='36,144,52,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='scrollbar.bmp' source='54,144,70,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='scrollbar.bmp' source='0,162,16,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='scrollbar.bmp' source='18,162,34,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='scrollbar.bmp' source='36,162,52,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='scrollbar.bmp' source='54,162,70,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; " />
+  <Default name="HScrollBar" value="button1normalimage=&quot;file='scrollbar.bmp' source='0,0,16,16' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='scrollbar.bmp' source='18,0,34,16' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='scrollbar.bmp' source='36,0,52,16' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='scrollbar.bmp' source='54,0,70,16' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='scrollbar.bmp' source='0,18,16,34' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='scrollbar.bmp' source='18,18,34,34' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='scrollbar.bmp' source='36,18,52,34' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='scrollbar.bmp' source='54,18,70,34' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='scrollbar.bmp' source='0,36,16,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='scrollbar.bmp' source='18,36,34,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='scrollbar.bmp' source='36,36,52,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='scrollbar.bmp' source='54,36,70,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='scrollbar.bmp' source='0,54,16,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='scrollbar.bmp' source='18,54,34,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='scrollbar.bmp' source='36,54,52,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='scrollbar.bmp' source='54,54,70,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='scrollbar.bmp' source='0,72,16,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='scrollbar.bmp' source='18,72,34,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='scrollbar.bmp' source='36,72,52,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='scrollbar.bmp' source='54,72,70,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; " />
+  <Default name="Slider" value="thumbsize=&quot;10,10&quot; bkimage=&quot;file='bg.bmp' corner='6,0,6,0' mask='#FFFF00FF'&quot; foreimage=&quot;file='fg.bmp' corner='6,0,6,0' mask='#FFFF00FF'&quot; thumbimage=&quot;file='thumb.bmp' source='30,0,40,10' mask='#FFDAEBF9'&quot; thumbhotimage=&quot;file='thumb.bmp' source='10,0,20,10' mask='#FFDAEBF9'&quot; " />
+  <Default name="Button" value="textcolor=&quot;#000000&quot; hottextcolor=&quot;#FFFFFF&quot; focusedtextcolor=&quot;#000000&quot; pushedtextcolor=&quot;#77a8de&quot; normalimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,0,96,24'&quot; hotimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,24,96,48'&quot; pushedimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,48,96,72'&quot; disabledimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,72,96,96'&quot;" />
+  <Default name="Option" value="textcolor=&quot;#FFbac0c5&quot; hottextcolor=&quot;#FF386382&quot; selectedtextcolor=&quot;#FF386382&quot; disabledtextcolor=&quot;#FFbac0c5&quot; textpadding=&quot;18,2,0,0&quot; align=&quot;left&quot; selectedimage=&quot;file='Button/RadioBtnSel.png' source='0,0,13,13' dest='0,5,14,19'&quot; normalimage=&quot;file='Button/RadioBtnNon.png' source='0,0,13,13' dest='0,5,14,19'&quot;" />
+  <Default name="CheckBox" value="textcolor=&quot;#FFbac0c5&quot; hottextcolor=&quot;#FF386382&quot; selectedtextcolor=&quot;#FF386382&quot; disabledtextcolor=&quot;#FFbac0c5&quot; textpadding=&quot;20,2,0,0&quot; align=&quot;left&quot; selectedimage=&quot;file='Icon/checked.png' dest='0,2,16,18'&quot; normalimage=&quot;file='Icon/unchecked.png' dest='0,2,16,18'&quot;" />
+  <Font name="微软雅黑" size="13" default="true" />
+  <Font name="微软雅黑" size="14" border="true" />
+  <VerticalLayout bkcolor="#FFFFFFFF" bordercolor="#FF6C89A0" bordersize="1" borderround="5,5" inset="1,0,1,0" >
+    <!-- 窗口标题部分开始 -->
+    <HorizontalLayout height="25" bkcolor="#FF74A4C3" bkcolor1="#FF3790CE" >
+      <Container inset="5,2,0,0" width="25" height="25" bkcolor="#FFF4F5F6" />
+      <VerticalLayout padding="5,0,0,0" inset="2,2,0,0" >
+        <Label text="Livezure 中心服务器" textcolor="#FFFFFFFF" font="0" />
+      </VerticalLayout>
+      <VerticalLayout />
+      <VerticalLayout width="95" >
+        <Button name="minbtn"float="true" pos="0,0,28,19" width="28" height="19" normalimage="title/btn_mini_normal.png" hotimage="title/btn_mini_highlight.png" pushedimage="title/btn_mini_down.png" />
+        <Button name="maxbtn" float="true" pos="28,0,56,19" width="28" height="19" normalimage="title/btn_max_normal.png" hotimage="title/btn_max_highlight.png" pushedimage="title/btn_max_down.png" />
+        <Button name="restorebtn" visible="false" float="true" pos="28,0,56,19" maxwidth="28" normalimage="title/btn_restore_normal.png" hotimage="title/btn_restore_highlight.png" pushedimage="title/btn_restore_down.png" />
+        <Button name="closebtn" float="true" pos="56,0,95,19" width="39" height="19" normalimage="title/btn_close_normal.png" hotimage="title/btn_close_highlight.png" pushedimage="title/btn_close_down.png" />
+      </VerticalLayout>
+    </HorizontalLayout>
+    <!-- 窗口标题部分结束 -->
+    <!-- 分隔线 -->
+    <HorizontalLayout height="1" bkcolor="#FF7498B4" />
+    <!-- 左右分栏页开始 -->
+    <HorizontalLayout bkcolor="#FF60B1FE" >
+      <!-- 左右分栏-左栏开始 -->
+      <!--<HorizontalLayout bkcolor="#FFC8C8C8" width="200" minwidth="0" maxwidth="200" inset="0,0,1,0" sepwidth="2" sepimm="true" >-->
+      <HorizontalLayout bkcolor="#FFC8C8C8" width="200" inset="0,0,1,0" >
+        <HorizontalLayout width="200" >
+          <VerticalLayout>
+            <!-- 左栏-顶部登陆管理员开始 -->
+            <HorizontalLayout height="70" bkcolor="#FFFAFAFA" >
+              <VerticalLayout width="60" >
+                <Button padding="15,10,0,0" name="portrait" width="48" height="48" normalimage="portrait.png" hotimage="portrait.png" pushedimage="portrait.png" />
+              </VerticalLayout>
+              <VerticalLayout padding="10,0,0,0" >
+                <Label padding="0,20,0,0" text="默认账户" textcolor="#FF13A0E1" font="1" />
+              </VerticalLayout>
+            </HorizontalLayout>
+            <!-- 左栏-顶部登陆管理员结束 -->
+            <!-- 分隔线开始 -->
+            <VerticalLayout height="3" >
+              <HorizontalLayout height="1" bkcolor="#FFFCFCFC" />
+              <HorizontalLayout height="1" bkcolor="#FFE2E2E2" />
+              <HorizontalLayout height="1" bkcolor="#FFFCFCFC" />
+            </VerticalLayout>
+            <!-- 分隔线结束 -->
+            <!-- 左栏-分类树开始 -->
+            <VerticalLayout bkcolor="#FFFFFFFF" >
+              <!-- 自定义导航控件开始 -->
+              <NavTree name="NavTree" header="hidden" itemlinecolor="#FFFFFFFF" itemshowhtml="true" vscrollbar="true" hscrollbar="true" itemhotimage="file='navtree/tree_hot.bmp' corner='2,1,2,1'" itemselectedimage="file='navtree/tree_select.bmp' corner='2,1,2,1'" hscrollbarstyle="width=&quot;3&quot; showbutton1=&quot;false&quot; showbutton2=&quot;false&quot;" vscrollbarstyle="width=&quot;3&quot; showbutton1=&quot;false&quot; showbutton2=&quot;false&quot;" />
+              <!-- 自定义导航控件结束 -->
+            </VerticalLayout>
+            <!-- 左栏-分类树结束 -->
+          </VerticalLayout>
+        </HorizontalLayout>
+      </HorizontalLayout>
+      <!-- 左右分栏-左栏结束 -->
+      <!-- 左右分栏-拖动条结束 -->
+      <!-- 左右分栏-右栏开始 -->
+      <HorizontalLayout bkcolor="#FFFFFFFF" >
+        <TabLayout name="navtree_tab" >
+          <!-- 当前正在运行的设备开始 -->
+          <HorizontalLayout virtualwnd="basic_device_wnd" >
+            <VerticalLayout>
+              <!-- 操作分类 tab 按钮开始 -->
+              <!-- 顶部线 -->
+              <HorizontalLayout height="1" bkcolor="#FFE2EAF0" />
+              <HorizontalLayout height="30" bkcolor="#FFC5D5E1" bkcolor2="#FFD1DBE3" >
+                <Option name="basic_device_option_running" group="basic_device_option" text="运行中设备" font="0" textcolor="#FF386482" width="80" height="30" align="center" textpadding="0,0,0,0" foreimage="button/tab_normal.png" hotimage="button/tab_hover.png" pushedimage="button/tab_active.png" selectedimage="button/white_tab_toggled.png" selected="true" />
+                <HorizontalLayout />
+                
+                <!--
+                <Button name="closebtn" width="90" height="32" normalimage="button/dlg_button_normal.png" hotimage="button/dlg_button_hover.png" pushedimage="button/dlg_button_active.png" />
+      
+                <Button name="add" showhtml="true" text="<x 8><i smallbutton/insert_normal.png><x 3>添加" align="left" textcolor="#FFAAAAAA" textpadding="0,0,0,0" textcolor="#FF386382" focusedtextcolor="##FF386382" hottextcolor="#FF386382" pushedtextcolor="#FF386382"  width="85" height="30" normalimage="button/button_normal.png" hotimage="button/button_hover.png" pushedimage="button/button_active.png" >
+                </Button>
+                
+                
+                <Button name="add" showhtml="true" text="<x 3><i smallbutton/insert_normal.png><x 3>" 
+                  align="left" textcolor="#FFAAAAAA" textpadding="0,0,0,0"
+                  textcolor="#FF386382" focusedtextcolor="##FF386382" hottextcolor="#FF386382" pushedtextcolor="#FF386382" 
+                  width="30" height="30" normalimage="button/button_normal.png" hotimage="button/button_hover.png" pushedimage="button/button_active.png" >
+                </Button>
+                -->
+                
+      
+                
+                <Combo padding="0,4,0,0" name="basic_device_comb" width="120" height="22" normalimage="file='combox/combox_120.png' source='0,0,120,22'" hotimage="file='combox/combox_120.png' source='0,22,120,44'" pushedimage="file='combox/combox_120.png' source='0,44,120,66'" textpadding="3,3,3,3" bordercolor="#FFEEEFF0" focusbordercolor="#FFEEEFF0" vscrollbar="true" itembkcolor="#FFFFFFFF" itemselectedbkcolor="#FFF0F5F8" itemhotbkcolor="#FFEEEFF0" >
+                  <ListLabelElement text=" 显示所有设备" bordercolor="#FFEEEFF0" height="22" selected="true" />
+                  <ListLabelElement text=" 显示运行中设备" bordercolor="#FFEEEFF0" height="22" />
+                  <ListLabelElement text=" 显示停止设备" bordercolor="#FFEEEFF0" height="22" />
+                </Combo>
+                <HorizontalLayout width="5" />
+              </HorizontalLayout>
+              <!-- 操作分类 tab 按钮结束 -->
+              <List name="basic_device_list" itemalign="left" vscrollbar="true" hscrollbar="false" headerbkimage="file='listctrl/listctrl.png' source='0,0,2,22'" itemselectedbkcolor="#FFE6F6FF" itemhotbkcolor="#FFF7F7F7" inset="1,1,1,1" header="show" borderround="2,2" bordercolor="#FFEFF2F5" bordersize="1" menu="true" >
+                <!--bkimage="file='listctrl/listctrl_bk.png' ytiled='true'"-->
+                <ListHeader menu="true" />
+                <ListHeaderItem text="运行状态" width="60" height="22" font="0" dragable="false" align="left" normalimage="file='listctrl/listctrl.png' source='0,0,2,22'" hotimage="file='listctrl/listctrl.png' source='2,0,4,22'" pushedimage="file='listctrl/listctrl.png' source='0,0,2,22'" sepimage="file='listctrl/listctrl.png' source='4,0,6,22'" sepwidth="2" />
+                <ListHeaderItem text="设备昵称" width="120" height="22" font="0" dragable="false" align="left" normalimage="file='listctrl/listctrl.png' source='0,0,2,22'" hotimage="file='listctrl/listctrl.png' source='2,0,4,22'" pushedimage="file='listctrl/listctrl.png' source='0,0,2,22'" sepimage="file='listctrl/listctrl.png' source='4,0,6,22'" sepwidth="2" />
+                <ListHeaderItem text="设备类型" width="120" height="22" font="0" dragable="false" align="left" normalimage="file='listctrl/listctrl.png' source='0,0,2,22'" hotimage="file='listctrl/listctrl.png' source='2,0,4,22'" pushedimage="file='listctrl/listctrl.png' source='0,0,2,22'" sepimage="file='listctrl/listctrl.png' source='4,0,6,22'" sepwidth="2" />
+                <ListHeaderItem text="地址" width="110" height="22" font="0" dragable="false" align="left" normalimage="file='listctrl/listctrl.png' source='0,0,2,22'" hotimage="file='listctrl/listctrl.png' source='2,0,4,22'" pushedimage="file='listctrl/listctrl.png' source='0,0,2,22'" sepimage="file='listctrl/listctrl.png' source='4,0,6,22'" sepwidth="2" />
+                <ListHeaderItem text="端口" width="50" height="22" font="0" dragable="false" align="left" normalimage="file='listctrl/listctrl.png' source='0,0,2,22'" hotimage="file='listctrl/listctrl.png' source='2,0,4,22'" pushedimage="file='listctrl/listctrl.png' source='0,0,2,22'" sepimage="file='listctrl/listctrl.png' source='4,0,6,22'" sepwidth="2" />
+                <ListHeaderItem text="通道号" width="50" height="22" font="0" dragable="false" align="left" normalimage="file='listctrl/listctrl.png' source='0,0,2,22'" hotimage="file='listctrl/listctrl.png' source='2,0,4,22'" pushedimage="file='listctrl/listctrl.png' source='0,0,2,22'" sepimage="file='listctrl/listctrl.png' source='4,0,6,22'" sepwidth="2" />
+				<ListHeaderItem text="工作目录" width="100" height="22" font="0" dragable="false" align="left" normalimage="file='listctrl/listctrl.png' source='0,0,2,22'" hotimage="file='listctrl/listctrl.png' source='2,0,4,22'" pushedimage="file='listctrl/listctrl.png' source='0,0,2,22'" sepimage="file='listctrl/listctrl.png' source='4,0,6,22'" sepwidth="2" />
+				<ListHeaderItem text="创建时间" width="150" height="22" font="0" dragable="false" align="left" normalimage="file='listctrl/listctrl.png' source='0,0,2,22'" hotimage="file='listctrl/listctrl.png' source='2,0,4,22'" pushedimage="file='listctrl/listctrl.png' source='0,0,2,22'" sepimage="file='listctrl/listctrl.png' source='4,0,6,22'" sepwidth="2" />
+				<ListHeaderItem text="备注" width="200" height="22" font="0" dragable="false" align="left" normalimage="file='listctrl/listctrl.png' source='0,0,2,22'" hotimage="file='listctrl/listctrl.png' source='2,0,4,22'" pushedimage="file='listctrl/listctrl.png' source='0,0,2,22'" sepimage="file='listctrl/listctrl.png' source='4,0,6,22'" sepwidth="2" />
+				<!--
+                <ListHeaderItem text="操作" width="160" height="22" font="0" dragable="false" align="left" normalimage="file='listctrl/listctrl.png' source='0,0,2,22'" hotimage="file='listctrl/listctrl.png' source='2,0,4,22'" pushedimage="file='listctrl/listctrl.png' source='0,0,2,22'" sepimage="file='listctrl/listctrl.png' source='4,0,6,22'" sepwidth="2" />
+				-->
+                <!-- 用户一条设备信息开始 -->
+                <!--
+                <ListContainerElement height="30" visible="true" >
+                  <HorizontalLayout>
+                    <VerticalLayout width="60" >
+                      <Button padding="23,8,0,0" name="device_ico" width="14" height="14" bkimage="listctrl/working_red.png" />
+                    </VerticalLayout>
+                    <Label name="plugin_name" width="150" text="HB7000" />
+                    <Label name="ip" width="150" text="192.168.1.110" />
+                    <Label name="port" width="100" text="3305" />
+                    <Label name="chanel" width="100" text="0" />
+                    <HorizontalLayout width="160" >
+                      <Button padding="0,1,0,0" name="device_ico" width="28" height="28" bkimage="listctrl/working_start_normal.png" hotimage="listctrl/wokring_start_hover.png" pushedimage="listctrl/working_start_active.png" />
+                      <Button padding="0,1,0,0" name="device_ico" width="28" height="28" bkimage="listctrl/working_pause_normal.png" hotimage="listctrl/wokring_pause_hover.png" pushedimage="listctrl/working_pause_active.png" />
+                      <Button padding="0,1,0,0" name="device_ico" width="28" height="28" bkimage="listctrl/working_delete_normal.png" hotimage="listctrl/wokring_delete_hover.png" pushedimage="listctrl/working_delete_active.png" />
+                      <Button padding="0,1,0,0" name="device_ico" width="28" height="28" bkimage="listctrl/working_search_normal.png" hotimage="listctrl/wokring_search_hover.png" pushedimage="listctrl/working_search_active.png" />
+                    </HorizontalLayout>
+                  </HorizontalLayout>
+                </ListContainerElement>
+                -->
+                <!-- 用户一条设备信息结束 -->
+              </List>
+            </VerticalLayout>
+          </HorizontalLayout>
+          <!-- 当前正在运行的设备结束 -->
+          <!-- 当前正在运行的用户开始 -->
+          <HorizontalLayout virtualwnd="basic_account_wnd" >
+            <VerticalLayout>
+              <!-- 操作分类 tab 按钮开始 -->
+              <!-- 顶部线 -->
+              <HorizontalLayout height="1" bkcolor="#FFE2EAF0" />
+              <HorizontalLayout height="30" bkcolor="#FFC5D5E1" bkcolor2="#FFD1DBE3" >
+                <Option name="basic_device_account_all" group="basic_device_account" text="注册用户" font="0" textcolor="#FF386482" width="80" height="30" align="center" textpadding="0,0,0,0" foreimage="button/tab_normal.png" hotimage="button/tab_hover.png" pushedimage="button/tab_active.png" selectedimage="button/white_tab_toggled.png" selected="true" />
+                <HorizontalLayout />
+                <Combo padding="0,4,0,0" name="basic_device_comb" width="120" height="22" normalimage="file='combox/combox_120.png' source='0,0,120,22'" hotimage="file='combox/combox_120.png' source='0,22,120,44'" pushedimage="file='combox/combox_120.png' source='0,44,120,66'" textpadding="3,3,3,3" bordercolor="#FFEEEFF0" focusbordercolor="#FFEEEFF0" vscrollbar="true" itembkcolor="#FFFFFFFF" itemselectedbkcolor="#FFF0F5F8" itemhotbkcolor="#FFEEEFF0" >
+                  <ListLabelElement text=" 显示所有设备" bordercolor="#FFEEEFF0" height="22" selected="true" />
+                  <ListLabelElement text=" 显示运行中设备" bordercolor="#FFEEEFF0" height="22" />
+                  <ListLabelElement text=" 显示停止设备" bordercolor="#FFEEEFF0" height="22" />
+                </Combo>
+                <HorizontalLayout width="5" />
+              </HorizontalLayout>
+              <!-- 操作分类 tab 按钮结束 -->
+              <List name="basic_account_list" itemalign="left" vscrollbar="true" hscrollbar="false" headerbkimage="file='listctrl/listctrl.png' source='0,0,2,22'" itemselectedbkcolor="#FFE6F6FF" itemhotbkcolor="#FFF7F7F7" inset="1,1,1,1" header="show" borderround="2,2" bordercolor="#FFEFF2F5" bordersize="1" menu="true" >
+                <!--bkimage="file='listctrl/listctrl_bk.png' ytiled='true'"-->
+                <ListHeader menu="true" />
+                <ListHeaderItem text="在线状态" width="60" height="22" font="0" dragable="false" align="left" normalimage="file='listctrl/listctrl.png' source='0,0,2,22'" hotimage="file='listctrl/listctrl.png' source='2,0,4,22'" pushedimage="file='listctrl/listctrl.png' source='0,0,2,22'" sepimage="file='listctrl/listctrl.png' source='4,0,6,22'" sepwidth="2" />
+                <ListHeaderItem text="昵称" width="130" height="22" font="0" dragable="false" align="left" normalimage="file='listctrl/listctrl.png' source='0,0,2,22'" hotimage="file='listctrl/listctrl.png' source='2,0,4,22'" pushedimage="file='listctrl/listctrl.png' source='0,0,2,22'" sepimage="file='listctrl/listctrl.png' source='4,0,6,22'" sepwidth="2" />
+                <ListHeaderItem text="用户名" width="130" height="22" font="0" dragable="false" align="left" normalimage="file='listctrl/listctrl.png' source='0,0,2,22'" hotimage="file='listctrl/listctrl.png' source='2,0,4,22'" pushedimage="file='listctrl/listctrl.png' source='0,0,2,22'" sepimage="file='listctrl/listctrl.png' source='4,0,6,22'" sepwidth="2" />
+				<ListHeaderItem text="备注" width="165" height="22" font="0" dragable="false" align="left" normalimage="file='listctrl/listctrl.png' source='0,0,2,22'" hotimage="file='listctrl/listctrl.png' source='2,0,4,22'" pushedimage="file='listctrl/listctrl.png' source='0,0,2,22'" sepimage="file='listctrl/listctrl.png' source='4,0,6,22'" sepwidth="2" />
+              	<ListHeaderItem text="创建时间" width="150" height="22" font="0" dragable="false" align="left" normalimage="file='listctrl/listctrl.png' source='0,0,2,22'" hotimage="file='listctrl/listctrl.png' source='2,0,4,22'" pushedimage="file='listctrl/listctrl.png' source='0,0,2,22'" sepimage="file='listctrl/listctrl.png' source='4,0,6,22'" sepwidth="2" />
+                <ListHeaderItem text="最后一次登陆时间" width="150" height="22" font="0" dragable="false" align="left" normalimage="file='listctrl/listctrl.png' source='0,0,2,22'" hotimage="file='listctrl/listctrl.png' source='2,0,4,22'" pushedimage="file='listctrl/listctrl.png' source='0,0,2,22'" sepimage="file='listctrl/listctrl.png' source='4,0,6,22'" sepwidth="2" />
+                <!--
+                <ListHeaderItem text="操作" width="160" height="22" font="0" dragable="false" align="left" normalimage="file='listctrl/listctrl.png' source='0,0,2,22'" hotimage="file='listctrl/listctrl.png' source='2,0,4,22'" pushedimage="file='listctrl/listctrl.png' source='0,0,2,22'" sepimage="file='listctrl/listctrl.png' source='4,0,6,22'" sepwidth="2" />
+                -->
+                 <!-- 用户一条设备信息开始 -->
+                 <!--
+                <ListContainerElement height="30" visible="true" >
+                  <HorizontalLayout>
+                    <VerticalLayout width="60" >
+                      <Button padding="23,8,0,0" name="account_online_btn" width="14" height="14" bkimage="listctrl/working_red.png" />
+                    </VerticalLayout>
+                    <Label name="nickname" width="130" text="我的昵称" />
+                    <Label name="uuid" width="130" text="rootuser" />
+                    <Label name="comment" width="165" text="小张的账户" />
+                    <Label name="createdtime" width="150" text="2013-2-12 18:12" />
+                    <HorizontalLayout name="operation" visiable="true" width="160" >
+                      <Button padding="0,1,0,0" name="device_ico" width="28" height="28" bkimage="listctrl/working_start_normal.png" hotimage="listctrl/wokring_start_hover.png" pushedimage="listctrl/working_start_active.png" />
+                      <Button padding="0,1,0,0" name="device_ico" width="28" height="28" bkimage="listctrl/working_pause_normal.png" hotimage="listctrl/wokring_pause_hover.png" pushedimage="listctrl/working_pause_active.png" />
+                      <Button padding="0,1,0,0" name="device_ico" width="28" height="28" bkimage="listctrl/working_delete_normal.png" hotimage="listctrl/wokring_delete_hover.png" pushedimage="listctrl/working_delete_active.png" />
+                      <Button padding="0,1,0,0" name="device_ico" width="28" height="28" bkimage="listctrl/working_search_normal.png" hotimage="listctrl/wokring_search_hover.png" pushedimage="listctrl/working_search_active.png" />
+                    </HorizontalLayout>
+                  </HorizontalLayout>
+                </ListContainerElement>
+                -->
+                <!-- 用户一条设备信息结束 -->
+              </List>
+            </VerticalLayout>
+          </HorizontalLayout>
+          <!--当前正在运行的用户结束 -->
+          <!-- 用户录像计划窗口开始 -->
+          <HorizontalLayout virtualwnd="basic_record_schedule_wnd" >
+          </HorizontalLayout>
+          <!-- 用户录像计划窗口结束 -->
+        </TabLayout>
+      </HorizontalLayout>
+      <!-- 左右分栏-右栏结束 -->
+    </HorizontalLayout>
+    <!-- 左右分栏页结束 -->
+    <!-- 分隔线开始 -->
+    <VerticalLayout height="3" >
+      <HorizontalLayout height="1" bkcolor="#FFFCFCFC" />
+      <HorizontalLayout height="1" bkcolor="#FFE2E2E2" />
+      <HorizontalLayout height="1" bkcolor="#FFFCFCFC" />
+    </VerticalLayout>
+    <!-- 分隔线结束 -->
+    <!-- 尾部 statusbar 开始 -->
+    <HorizontalLayout height="25">
+    </HorizontalLayout>
+    <!-- 尾部 statusbar 结束 -->
+  </VerticalLayout>
+</Window>

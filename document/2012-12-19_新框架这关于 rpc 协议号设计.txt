@@ -1,0 +1,266 @@
+协议相关 2012-12-19 21:19
+
+
+/* declare current version environments */
+#define rpc_id_encrypt                encrypt_type_none
+#define rpc_id_proto_ver              0
+
+#define rpc_id_platform               0
+#define rpc_id_version_check          0
+#define rpc_id_heartbeat              1
+
+#define rpc_id_push                   1
+#define rpc_id_push_update            0
+
+#define rpc_id_account                2
+#define rpc_id_account_login          0
+#define rpc_id_account_logout         1
+#define rpc_id_account_create         2
+#define rpc_id_account_modify         3
+#define rpc_id_account_delete         4
+#define rpc_id_account_list           5
+
+#define rpc_id_device                 3
+#define rpc_id_device_create          0
+#define rpc_id_device_modify          1
+#define rpc_id_device_delete          2
+#define rpc_id_device_list            3
+
+#define rpc_id_user_storage           4
+#define rpc_id_user_storage_create    0
+#define rpc_id_user_storage_modify    1
+#define rpc_id_user_storage_delete    2
+#define rpc_id_user_storage_list      3
+
+#define rpc_id_play                   5
+#define rpc_id_play_uuid              0
+#define rpc_id_play_stop              1
+#define rpc_id_play_touch             2
+
+#define rpc_id_record                 6
+#define rpc_id_record_play            0
+#define rpc_id_record_stop            1
+
+
+
+主版本号 0 为与平台相关
+===============================================
+
+子版本号
+0 check_version
+---------------
+
+c->s get pid=?&ver=?
+==>
+s->c rid=?&new_ver=?&force_update=?&update_log=?
+rid
+0 success
+-1 syntax error
+
+其中 pid
+online_pc_win,
+online_android_phone,
+online_android_pad,
+online_ios_phone,
+online_ios_pad,
+
+1001, internal_storage_module
+1002, internal_agent_module
+
+version 定义，目前是 01 全部都是.
+
+1 heartbeat
+-----------
+c->s get <null param>
+s->c rid
+
+其中 rid
+0 heartbeat ok
+-300 session expired
+
+
+主版本号 1 为 s->c push 相关
+===================================================
+
+1 push ==>
+agent modify/update/disconnect <push for uuid only>
+
+
+主版本号 2 为账户相关
+===================================================
+
+公用错误
+====================
+-255 syntax error 
+-256 internal error
+-300 session expired
+===================
+
+0 login
+c->s get uuid=?&pwd=?&pid=?
+==>
+s->c rid=?&is_admin=?&ref_admi_uuid=?
+其中 rid
+0 login success
+-1 uuid or pwd invalid.
+-255 internal error
+-256 syntax error
+
+1 logout
+c->s get <null param>
+s->c rid
+其中 rid
+0 logout ok
+-300 not valid operaion
+
+2 create <root only>
+c->s get uuid,pwd,nickname,comment
+s->c rid
+其中 rid
+0 craete ok
+-1 no permission
+-2 uuid exist
+-255 syntax error
+-256 internal error
+
+3 modify
+c->s get old_pwd, new_pwd, nickname, comment
+s->s rid
+其中 rid
+0 modify ok
+-1 old pwd not correct
+-255 internal error
+-256 syntax error
+
+// 这里需要根据登陆的 session 判断是不是管理员账户
+4 delete <root only>
+c->s get check_pwd, del_uuid
+s->c rid
+其中 rid
+0 delete ok
+-1 no permission
+-2 admin old pwd not correct
+-3 cannot be admin owner
+-4 user not exist
+-255 internal error
+-256 syntax error
+
+5 list
+c->s get <null param>
+s->c rid=?&count=?&account="uuid=?&nickname=?&comment=?&created=?"&account=".."
+0 list ok
+-1 no permission
+-2 list failed
+
+[字段为]
+
+/************************
+禁止 drop 从网络，此处必须联系管理员。
+6 drop root <root only>
+s->s get check_pwd
+s->c rid
+其中 rid
+0 drop ok
+-2 old pwd not correct
+-255 internal error
+-256 syntax error
+
+管理员的申请现在也必须直接操作，不得网上申请。
+所以 license 的设置是保留的函数。
+因为只要是直接操作的，肯定有管理员权限了。
+****************/
+
+
+主版本号 3 为 agent 相关
+===================================================
+0 create
+c->s get plugin_name=?&ip=?&port=?&uuid=?&pwd=?&channel_number=?seg_folder=?&seg_file=?&seg_in_count=?&seg_per_second=?&comment=?
+s->c rid=?&/*created */uuid=?
+0 create ok
+-1 no permission
+-2 uuid exist
+-3, work folder exist
+-255 syntax error 
+-256 internal error
+
+1 delete
+c->s get uuid=?
+s->c rid=?
+0 delete ok
+-1 no permissino
+-2 no exist
+
+2 list
+c->s get <null param>
+s->c rid=?&count=?&agent="uuid=?&plugin_name=?&ip=?&port=?&uuid=?&pwd=?&channel_number=?seg_folder=?&seg_file=?&seg_in_count=?&seg_per_second=?&comment=?"&agent=".."
+rid
+0 list ok
+-1 no permission
+-2 list failed
+
+主版本号 4 为 storage 相关
+===================================================
+0 create
+c->s agent_uuid=?&dayofweek=<0,0,...共 7 个，为 1 录像>&timeofday_1=?<0,0,0,...24 个，为 1 说明要录像"&timeofday_2=?<0,0,0,...24 个，为 1 说明要录像"
+s->c rid=? /* tasked */uuid=?
+rid
+0 task ok
+-1 no permission
+-2 session exist
+
+1 modify
+c->s uuid=?&agent_uuid=?&dayofweek=<0,0,...共 7 个，为 1 录像>&timeofday_1=?<0,0,0,...24 个，为 1 说明要录像"&timeofday_2=?<0,0,0,...24 个，为 1 说明要录像"
+s->c rid=?
+0 modify ok
+-1 no permissino
+-2 mofidy failed
+
+2 delete
+c->s get uuid=?
+s->c rid=?
+0 delete ok
+-1 no permissino
+-2 delete failed
+
+3 list
+c->s get <null param>
+s->c rid=?&count=?&storage="uuid=?&agent_uuid=?&dayofweek=<0,0,...共 7 个，为 1 录像>&timeofday_1=?<0,0,0,...24 个，为 1 说明要录像"&timeofday_2=?<0,0,0,...24 个，为 1 说明要录像"&storage=".."
+rid
+0 list ok
+-1 no permission
+-2 list failed
+
+主版本号 5 为 play/record 相关 (updated at 2013_1_9)
+===================================================
+0 play
+c->s get uuid=?
+s->c rid=
+rid
+ref success start ok and returned current ref
+-1 uuid not exist
+[ segmenter_api.c error
+-2 plugin not support
+-3 [param] could not created working folder
+-4 login to device failed.
+-5 play device failed
+-6 internal error[check segmenter_api.c]
+]
+/* 将这个任务发给服务器上，服务器在后台会自动处理。
+客户端可以根据 touch 去取得服务器的状态 */
+
+1 stop
+c->s get uuid=?
+s->c rid=?
+ref_count return current device ref(0 is the last useed and stopped)
+-1 device uuid not valid
+
+2 touch
+c->s get uuid=?
+s->c ret=?&elapsed=?&path=?
+ref device is current work status
+0 device is not work
+-1 device not exist
+-2 device is startting...
+* 'elapsed' and 'path' only valid when rid = 0
+path
+full path for live streaming, eg: http://2013.1.4:1521/folder/hls.m3u8

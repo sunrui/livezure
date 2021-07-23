@@ -1,0 +1,72 @@
+数据库设计 rui.sun 2012_12_22_0_16
+
+需求:
+所有的账户是不能重复的，不在让用户输入登陆用户名的时候，还要输入 ref admin id。这样子的体验不太好。
+
+t_account_basic
+uuid <<primary key>>, pwd, nick_name, comment, create_time
+
+t_account_admin /* 对于用户申请权限没成功的用户，在 1 周内自动被系统回收（删除） */
+basic_uuid, license_type, licensed_time, expired_time, create_time
+
+其中 license_index 是从0递增的，因为用户可能续费了 ^_^.
+查询的时候，使用 order by license_index 找一个最新的 expired_time 就可以了
+//// 去掉 /// 这些放在日志里就可以了。
+
+其中
+t_account_license 《固定》
+license_type	comment
+0	this license is now must be checking by service root.
+1	this license have expired time limited.
+2	this license is for ever for use
+
+t_account_child
+basic_uuid, ref_admin_uuid, create_time
+
+t_account_child_permission
+ref_admin_uid, can_view_ba, can_view_record, can_ptz_ba, can_task_record
+
+t_device_basic
+uuid<<guid_primary_key>>, plugin_name, dev_ip, dev_port, dev_user,dev_pwd, channel_number
+seg_folder, seg_file, seg_in_count, seg_per_sec, create_time
+
+t_account_device
+basic_uuid, ref_admin_uuid, nick_name, comment, is_top_level<1_top, 0_child>, ref_parent_uuid
+full_uri_name /* 这个要动态生成？ */
+
+对于 agent_conf 生成以后的外观会是这样子的
+
+<后厂村路>
+   <后树村路_饭店_南口> ==> 实际的地址为 dvr 192.168.1.101 -> 0
+   <后树村路_饭店_北口> ==> 实际的地址为 dvr 192.168.1.101 -> 1
+   <后树村路_饭店_东口> ==> 实际的地址为 dvr 192.168.1.102 -> 0
+  
+  
+2012-12-25
+对于用户的授权将有一个好的办法，
+用户向我们申请授权，接着我们发给他一个网络的 session_id（随机生成）。
+这个sesssion标识了，什么时候可以用，到什么时间，限制多少台录像的需求。等等。
+接着发给用户，用户输入以后，就可创建管理员用户了。
+每一个 sesion 只可以使用一次（或者可以重复激活？）
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

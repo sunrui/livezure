@@ -1,0 +1,47 @@
+2012-12-2 4:36
+关于 db 的说明
+
+t_user_client 用于存放用户登陆的密码信息
+包含的字段
+uid, pwd, pid, rid, nickname, comment, createtime.
+其中
+pid: client 0, agent 1, storage 2
+rid: 0 noneadmin, 1 admin
+
+
+t_online_user 用于标识当前在线的用户。（包含所有的登陆或者offline的数据）
+uid, fd, pid, r_id, heartbeat, ip, port 
+
+
+
+2012_12_4 16:19
+关于 bridge agent 可以支配的设备信息
+--------------------------------------------------------------------------
+t_agent_conf 用于在中心服务器配置好 agent 需要可以做的任务列表
+conf_uuid, uid, plugin_name, ip, port, user, pwd, channelnum, channelcount, seg_folder, seg_file, seg_in_count, seg_per_sec, comment
+其中:
+uid 是对应 t_userclient 的，其中 pid = platform_agent
+
+typedef struct db_agent_conf
+{
+	char conf_uuid[38 + 1]; /* unique id of db_agent_conf */
+	char uid[16 + 1]; /* user id is unique string and must be short than 16 bits */
+	char plugin_name[16 + 1]; /* registered plugin name */
+	char ip[16 + 1]; /* device ip */
+	int port; /* device port */
+	char user[32 + 1]; /* device login user */
+	char pwd[32 + 1]; /* device login pwd */
+	int channle_number; /* open channel number */
+	int channel_count; /* all channel count */
+	char seg_folder[32 + 1]; /* saved segmenter folder */
+	char seg_file[32 + 1]; /* saved segmenter file, eg: live.m3u8 */
+	int seg_in_count; /* how many segmenter files in one seg_file */
+	int seg_per_sec; /* segmenter per-second */
+	char comment[256]; /* comment */
+} db_agent_conf_t;
+
+
+
+
+t_online_agent 用于标识在线的 智能云接入设备
+uid, public_full_addr, device_ip /* unique sign */, channel_num, is_working=yes
